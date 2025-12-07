@@ -1,10 +1,16 @@
 class Solution {
     public int countOdds(int low, int high) {
-        int count=0;
-    if(low%2==1&&high%2==1) count=((high-low)/2)+1;
-    if(low%2==0&&high%2==0)count=((high-low)/2);
-    if(low%2==0&&high%2==1)count=((high-low)/2)+1;
-    if(low%2==1&&high%2==0)count=((high-low)/2)+1;
-     return count;  
+        return (high + 1)/ 2 - (low) / 2;
+    }
+}
+
+class Leet_1523{
+    public static void main(String[] args) {
+        int low = 3;
+        int high = 7;
+
+        Solution obj = new Solution();
+
+        System.out.println(obj.countOdds(low , high));
     }
 }
